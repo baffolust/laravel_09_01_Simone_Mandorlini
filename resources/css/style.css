@@ -1,0 +1,20 @@
+body {
+
+    background-color: rgb(13, 19, 13);
+
+}
+
+.bg-custom-header {
+
+    background-color: rgba(255, 255, 255, 0.757);
+    height: 15vh;
+
+}
+
+.bg-custom-form {
+
+    background-color: rgba(255, 255, 255, 0.033);
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
