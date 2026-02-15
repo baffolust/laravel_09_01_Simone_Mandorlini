@@ -11,7 +11,8 @@ class Receipt extends Model
         'title',
         'description',
         'category',
-        'author'
+        'author',
+        'img'
 
     ];
 }

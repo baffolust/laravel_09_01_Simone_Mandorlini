@@ -6,6 +6,7 @@ use App\Http\Controllers\ReceiptController;
 
 Route::get('/', [PublicController::class, 'homepage'])->name('home');
 
-Route::post('/receipt/create', [ReceiptController::class, 'store'])->name('receipt.create');
 
+Route::get('/receipt/create', [ReceiptController::class, 'create'])->name('receipt.create');
+Route::post('/receipt/store', [ReceiptController::class, 'store'])->name('receipt.store');
 Route::get('/receipt/index', [ReceiptController::class, 'index'])->name('receipt.index');
