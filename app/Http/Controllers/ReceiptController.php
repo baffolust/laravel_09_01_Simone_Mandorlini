@@ -41,7 +41,7 @@ class ReceiptController extends Controller
 
     ]);
 
-    return redirect()->back();
+    return redirect()->back()-with('creation_success', 'Receipt entered successfully');
 
 
     }

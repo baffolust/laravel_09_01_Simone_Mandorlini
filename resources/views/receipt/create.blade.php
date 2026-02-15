@@ -9,6 +9,12 @@
 
     </header>
 
+    @if (session('creation_success'))
+        <div class="alert alert-success">
+            {{ session('creation_success') }}
+        </div>
+    @endif
+
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -28,7 +34,7 @@
                     @csrf
 
                     <div class="mb-3">
-                        <label for="username" class="form-label">Nome</label>
+                        <label for="username" class="form-label">Autore della Ricetta</label>
                         <input type="text" class="form-control" id="username" name="user_name">
                     </div>
 
