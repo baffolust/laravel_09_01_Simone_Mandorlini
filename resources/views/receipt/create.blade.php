@@ -9,12 +9,22 @@
 
     </header>
 
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
     <div class="container">
         <div class="row justify-content-center text-light mt-2">
             <div class="col-12 col-md-6">
 
-                <form class="bg-custom-form p-3" action="{{ route('receipt.store') }}" enctype="multipart/form-data" method="POST">
+                <form class="bg-custom-form p-3" action="{{ route('receipt.store') }}" enctype="multipart/form-data"
+                    method="POST">
                     @csrf
 
                     <div class="mb-3">

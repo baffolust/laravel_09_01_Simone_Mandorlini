@@ -22,12 +22,24 @@ class ReceiptRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name'=>'required',
-            'description'=>'required | min:50 ',
-            'category' =>'required',
-            
-
-            //
+            'receipt_title'=>'required',
+            'user_name'=>'required',
+            'receipt_description'=>'min:50 | max:200',
+            'receipt_category' =>'required',
         ];
+    }
+
+    public function messages(){
+
+        return [
+
+            'receipt_title.required'=>'Enter NAME of the Receipt',
+            'receipt_description.min'=>'DESCRIPTION must be between 50 and 200 characters',
+            'receipt_description.max'=>'DESCRIPTION must be between 50 and 200 characters',
+            'user_name.required'=>'Enter AUTHOR NAME of the Receipt',
+            'receipt_category.required'=>'Enter CATEGORY of the Receipt'
+
+        ];
+
     }
 }
