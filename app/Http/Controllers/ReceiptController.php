@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ReceiptRequest;
 use App\Models\Receipt;
-use Illuminate\Http\Request;
+
 
 class ReceiptController extends Controller
 {
@@ -13,13 +14,18 @@ class ReceiptController extends Controller
         return view('receipt.create');
     }
 
-    public function store(Request $request){
+    public function store(ReceiptRequest $request){
 
     $author = $request->user_name;
     $title = $request->receipt_title;
     $category = $request->receipt_category;
     $description = $request->receipt_description;
-    $img = $request->file('receipt_img')->store('media/img' , 'public');
+    $img = null;
+
+    if($request->file('receipt_img')){
+        
+        $img = $request->file('receipt_img')->store('media/img' , 'public');
+    }
 
 
 
