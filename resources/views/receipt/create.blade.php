@@ -35,22 +35,22 @@
 
                     <div class="mb-3">
                         <label for="username" class="form-label">Autore della Ricetta</label>
-                        <input type="text" class="form-control" id="username" name="user_name">
+                        <input type="text" class="form-control" id="username" value="{{old('user_name')}}" name="user_name">
                     </div>
 
                     <div class="mb-3">
                         <label for="receiptTitle" class="form-label">Titolo della Ricetta</label>
-                        <input type="text" class="form-control" id="receiptTitle" name="receipt_title">
+                        <input type="text" class="form-control" id="receiptTitle" value="{{old('receipt_title')}}" name="receipt_title">
                     </div>
 
                     <div class="mb-3">
                         <label for="category" class="form-label">Categoria del Piatto</label>
-                        <input type="text" class="form-control" id="category" name="receipt_category">
+                        <input type="text" class="form-control" id="category" value="{{old('receipt_category')}}" name="receipt_category">
                     </div>
 
                     <div class="mb-3">
                         <label for="receiptDescription" class="form-label">Scrivi la tua ricetta qui</label>
-                        <textarea name="receipt_description" class="form-control" id="receiptDescription" cols="30" rows="10"></textarea>
+                        <textarea name="receipt_description" class="form-control" id="receiptDescription" cols="30" rows="10">{{old('receipt_description')}}</textarea>
                     </div>
 
                     <div class="mb-3">
